@@ -34,10 +34,35 @@ class Student {
     }
 }
 
+class Polygon {
+    void displayInfo() {
+        System.out.println("A polygon is a two dimensional shape with straight lines.");
+    }
+
+    int getPerimeter(int[] sides) {
+        int perimeter = 0;
+        // find sum of all sides
+        for (int side : sides) {
+            perimeter = perimeter + side;
+        }
+
+        return perimeter;
+    }
+}
+
+// inherit the Quadrilateral class withs displayInfo() method
+class Quadrilateral extends Polygon {
+    void displayInfo() {
+        System.out.println("A quadrilateral is a polygon with 4 sides.");
+    }
+}
+
 class Main {
     public static void main(String[] args) {
+
         
         // take the score input
+        // get sides input
         Scanner input = new Scanner(System.in);
         
         System.out.println("Enter student's name: ");
@@ -55,6 +80,26 @@ class Main {
         // print the grade
         System.out.println("Student: " + student.getName());
         System.out.println("Grade: " + student.grade);
+
+        // create an object of Quadrilateral
+        Quadrilateral q1 = new Quadrilateral();
+        
+        // sides of triangle
+        int[] quadrilateralSides = new int[4];
+                
+        for (int i = 0; i < quadrilateralSides.length; ++i) {
+                quadrilateralSides[i] = input.nextInt();
+            }
+        
+        // call getPerimeter using q1
+        int perimeter = q1.getPerimeter(quadrilateralSides);
+        System.out.println(perimeter);
+        
+        // call displayInfo() method
+        q1.displayInfo();
         input.close();
     }
 }
+
+
+
