@@ -34,10 +34,9 @@ class Student {
     }
 }
 
-class Polygon {
-    void displayInfo() {
-        System.out.println("A polygon is a two dimensional shape with straight lines.");
-    }
+// abstract class, interface: all method are abstract :: to use 'interface' notice the key 'implements' like as 'extends' 
+abstract class Polygon {                  
+    abstract void displayInfo();
 
     int getPerimeter(int[] sides) {
         int perimeter = 0;
@@ -53,6 +52,8 @@ class Polygon {
 // inherit the Quadrilateral class withs displayInfo() method
 class Quadrilateral extends Polygon {
     void displayInfo() {
+        
+        // super : access to father's method class
         System.out.println("A quadrilateral is a polygon with 4 sides.");
     }
 }
