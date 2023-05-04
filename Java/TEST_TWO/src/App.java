@@ -1,5 +1,13 @@
 import java.util.Scanner;
 
+class test {
+    final int nummber = 8;   // final rằng buộc ko thể thay đổi giá trị của trường, phương thức và lớp;
+    static String name = "text";
+    static int add(int a, int b){
+        return a+b;
+    }
+}
+
 public class App {
     void printNames(String[] names){
         for(String name : names){
@@ -19,6 +27,8 @@ public class App {
         App obj = new App();
         obj.printNames(names);
 
+        System.out.println(test.name);
+        System.out.println(test.add(3, 4));
         // charAt() truy cap ky tu trong chuoi String tai vi tri index
         // concat() noi 2 chuoi voi nhau
         // equals() so sanh 2 chuoi

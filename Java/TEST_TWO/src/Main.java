@@ -38,6 +38,10 @@ class Student {
 abstract class Polygon {                  
     abstract void displayInfo();
 
+    Polygon(){
+        System.out.println("i'm polygon");
+    }
+
     int getPerimeter(int[] sides) {
         int perimeter = 0;
         // find sum of all sides
@@ -51,6 +55,12 @@ abstract class Polygon {
 
 // inherit the Quadrilateral class withs displayInfo() method
 class Quadrilateral extends Polygon {
+
+    Quadrilateral(){
+        super();     // super()  gọi đến hàm khởi tạo lớp cha, và phải đứng đầu tiên trong hàm khởi tạo con
+        System.out.println("i'm quadrilateral");
+    }
+
     void displayInfo() {
         
         // super : access to father's method class
@@ -85,6 +95,9 @@ class Main {
         // create an object of Quadrilateral
         Quadrilateral q1 = new Quadrilateral();
         
+        // instanceof : xem đối tượng có phải là 1 thể hiện của 1 class hay ko
+        System.out.println(q1 instanceof Polygon);
+
         // sides of triangle
         int[] quadrilateralSides = new int[4];
                 
