@@ -9,8 +9,10 @@ private:
 	string add;
 	vector<Book> vb;
 public:
-	Person() {}
+
 	Person(string name, int age, string add, vector<Book> vb) : name(name), age(age), add(add), vb(vb) {}
+	//setter getter
+	//encapsulation
 	string getName()
 	{
 		return name;

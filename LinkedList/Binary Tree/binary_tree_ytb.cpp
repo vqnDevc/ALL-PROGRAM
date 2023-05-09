@@ -211,7 +211,7 @@ int main() {
     	root = updateTreeAvl(root);
 	}
 	
-	preOrder_PrintTree(root);
+	postOrder_PrintTree(root);
 	cout << "\nAmount Node:" << countNode(root);
 //	int b; cin >> b;
 //	root = deleteNumber(root, b);
