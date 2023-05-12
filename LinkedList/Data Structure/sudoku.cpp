@@ -28,6 +28,19 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    
+    Solution s;
+    vector<vector<char>> board(9, vector<char>(9));
+    for(int i=0;i < board.size(); i++){
+        for(int j=0; j<board[i].size();j++){
+            cin >> board[i][j];
+        }
+    }
+
+    if(s.isValidSudoku(board)){
+        cout << "TRUE";
+    }else{
+        cout << "FALSE";
+    }
+
     return 0;
 }
